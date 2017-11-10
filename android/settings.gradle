@@ -1,0 +1,3 @@
+rootProject.name = 'sfa_proto'
+
+include ':app'
