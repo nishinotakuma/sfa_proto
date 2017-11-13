@@ -20,12 +20,36 @@ const instructions = Platform.select({
 });
 
 export default class App extends Component<{}> {
+
+  constructor(){
+    super();
+    this.state = {
+      list: []
+    }
+  }
+
+  componentWillMount(){
+    fetch('http://192.168.33.11:3000/native/companies')
+      .then((response) => response.json())
+      .then((responseData) => {
+        console.log(responseData)
+        this.setState({
+          list: responseData
+        });
+      })
+      .done();
+  }
+
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
+        {this.state.list.map((item)=>{
+          return(
+            <Text style={styles.welcome}>
+              {item.company.name}
+            </Text>
+          )
+        })}
         <Text style={styles.instructions}>
           To get started, edit App.js
         </Text>
