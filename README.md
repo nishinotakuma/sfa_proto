@@ -31,24 +31,15 @@ react-native run-android
 
 https://facebook.github.io/react-native/docs/getting-started.html#xcode
 
-- Homebrewをインストールhttp://brew.sh/index_ja.html
-
-ターミナルを開いて以下のコマンドを実行
-
-```
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
-
-- node.jsが入っていない場合はnodejsをインストール
+- node.jsが入っていない場合はnodejsをインストール([Reactのビルド方法](https://baseconnect.docbase.io/posts/133175#nodejs%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB)のnodejsインストール方法と同じ)
 
 ```zsh
-brew install node
-```
-
-- watchmanをインストール(bug監視のため)
-
-```zsh
-brew install watchman
+cd
+git clone https://github.com/creationix/nvm.git ~/.nvm
+source ~/.nvm/nvm.sh
+nvm --version
+nvm install v7.7.2
+source ~/.nvm/nvm.sh
 ```
 
 - reactNativeをグローバルにインストール
