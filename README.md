@@ -2,6 +2,12 @@
 
 ## 起動方法
 
+### packageインストール
+```
+cd sfa_proto
+npm install
+```
+
 ### Rails起動
 Rails側は普通にvagrant内で起動
 
@@ -53,4 +59,5 @@ npm install -g react-native-cli
 
 ### androidエミュレータを使う場合
 公式ドキュメントに沿ってAndroid Studioをインストールする。
+
 https://facebook.github.io/react-native/docs/getting-started.html#java-development-kit
