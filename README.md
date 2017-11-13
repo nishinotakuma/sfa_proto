@@ -5,12 +5,20 @@
 ### Rails起動
 Rails側は普通にvagrant内で起動
 
-### iosシミュレータ起動
-
+### ios起動
+以下のコマンドでxcodeのシミュレータが自動起動。
 ```
 cd sfa_proto
 react-native run-ios
 ```
+
+### androidエミュレータ起動
+あらかじめ、エミュレータを起動して、以下のコマンド。
+```
+cd sfa_proto
+react-native run-android
+```
+
 ## 新規開発環境構築
 
 - xcodeをインストール（している人は飛ばす）
@@ -42,3 +50,7 @@ brew install watchman
 ```zsh
 npm install -g react-native-cli
 ```
+
+### androidエミュレータを使う場合
+公式ドキュメントに沿ってAndroid Studioをインストールする。
+https://facebook.github.io/react-native/docs/getting-started.html#java-development-kit
